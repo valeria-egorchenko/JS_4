@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Пример 26</title>
+  </head>
+  <body>
+    <script>
+      let n = prompt("Введите число n: ");
+      while (isNaN(parseInt(n)) || parseInt(n) < 0 || !Number.isInteger(parseFloat(n)) || n.length > 7) {
+        alert("число должно быть: \nбольше 0 \nцелое \nдлинной не больше 7 символов");
+        n = prompt("Введите число n: ");
+      }
+      let z = 1; //z хранит результат n!
+      if (parseInt(n) > 1) {
+        let i = 2;
+        do {
+          z = z * i;
+          i++;
+        } while (i <= +n);
+      }
+      if (z === Infinity)
+        alert("Результат выходит за пределы значения переменной");
+      else alert("Факториал числа " + n + " равен " + z);
+    </script>
+  </body>
+</html>

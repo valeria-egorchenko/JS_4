@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        let color = prompt("Введите цвет гриба (белый, желтый, красный, коричневый):");
+        let skirt = prompt("Наличие юбки (есть, нет):");
+
+switch(color) {
+    case "белый":
+        if(skirt === "нет") {
+            alert("Вы нашли белый гриб");
+        } else {
+            alert("С грибами надо быть внимательными");
+        }
+        break;
+    case "красный":
+        if(skirt === "есть") {
+            alert("А не мухомор ли это");
+        } else if(skirt === "нет") {
+            alert("Может это подосиновик");
+        } else {
+            alert("Ошибка: некорректно введено наличие юбки");
+        }
+        break;
+    case "желтый":
+    case "коричневый":
+        alert("С грибами надо быть внимательными");
+        break;
+    default:
+        alert("Ошибка: некорректно введен цвет гриба");
+}
+</script>
+</body>
+</html>

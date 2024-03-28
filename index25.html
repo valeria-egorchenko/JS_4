@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Пример 25</title>
+  </head>
+  <body>
+    <script>
+      let x = prompt("Введите число X:", " только число");
+    while (isNaN(x) || x === ' ' || x.length > 10) {
+      alert("Это число выходит за рамки формата");
+      reload(window.location.reload());
+    }
+    let y = prompt("Введите число Y:", " только число");
+    while (isNaN(y) || y === ' ' || y.length > 10) {
+      alert("Это число выходит за рамки формата");
+      reload(window.location.reload());
+    }
+    let result = Math.pow(x, y);
+
+    if (result == NaN || !isFinite(result))
+      alert("Число " + x + " в степени " + y + " слишком большое ");
+    else
+      alert("Число " + x + " в степени " + y + " равно " + result);
+
+    </script>
+  </body>
+</html>
